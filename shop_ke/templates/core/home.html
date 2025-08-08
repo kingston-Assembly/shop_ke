@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{% block content %}
+<h1 class="mb-4">Welcome to Shop KE</h1>
+
+<h4 class="mt-4">Categories</h4>
+<div class="row row-cols-2 row-cols-md-4 g-3">
+  {% for cat in categories %}
+  <div class="col">
+    <a href="/shop/category/{{ cat.slug }}/" class="text-decoration-none">
+      <div class="border rounded p-3 h-100 text-center">{{ cat.name }}</div>
+    </a>
+  </div>
+  {% empty %}
+  <p>No categories yet.</p>
+  {% endfor %}
+</div>
+
+<h4 class="mt-4">Newest Products</h4>
+<div class="row row-cols-2 row-cols-md-4 g-3">
+  {% for product in products %}
+  <div class="col">
+    <div class="card h-100">
+      {% if product.image %}
+      <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}" />
+      {% endif %}
+      <div class="card-body">
+        <h6 class="card-title">{{ product.name }}</h6>
+        <p class="card-text mb-2">KSh {{ product.price|floatformat:0|intcomma }}</p>
+        <a href="/shop/product/{{ product.slug }}/" class="btn btn-sm btn-outline-primary">View</a>
+      </div>
+    </div>
+  </div>
+  {% empty %}
+  <p>No products yet.</p>
+  {% endfor %}
+</div>
+{% endblock %}

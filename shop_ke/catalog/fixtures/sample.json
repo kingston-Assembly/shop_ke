@@ -1,0 +1,37 @@
+[
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {"name": "Electronics", "slug": "electronics", "description": "Phones, laptops and accessories", "is_active": true, "created_at": "2024-01-01T00:00:00Z"}
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {"name": "Fashion", "slug": "fashion", "description": "Clothing and shoes", "is_active": true, "created_at": "2024-01-01T00:00:00Z"}
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {"name": "Groceries", "slug": "groceries", "description": "Daily essentials", "is_active": true, "created_at": "2024-01-01T00:00:00Z"}
+  },
+  {
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {"category": 1, "name": "Smartphone X", "slug": "smartphone-x", "description": "Affordable 4G smartphone", "price": "15999.00", "image": "", "stock": 10, "is_active": true, "created_at": "2024-01-02T00:00:00Z", "updated_at": "2024-01-02T00:00:00Z"}
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {"category": 1, "name": "Laptop Pro 14", "slug": "laptop-pro-14", "description": "14-inch laptop for work and school", "price": "89999.00", "image": "", "stock": 5, "is_active": true, "created_at": "2024-01-02T00:00:00Z", "updated_at": "2024-01-02T00:00:00Z"}
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {"category": 2, "name": "Men's Sneakers", "slug": "mens-sneakers", "description": "Comfortable everyday shoes", "price": "3999.00", "image": "", "stock": 20, "is_active": true, "created_at": "2024-01-02T00:00:00Z", "updated_at": "2024-01-02T00:00:00Z"}
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {"category": 3, "name": "Maize Flour 2kg", "slug": "maize-flour-2kg", "description": "Premium sifted maize flour", "price": "250.00", "image": "", "stock": 100, "is_active": true, "created_at": "2024-01-02T00:00:00Z", "updated_at": "2024-01-02T00:00:00Z"}
+  }
+]
