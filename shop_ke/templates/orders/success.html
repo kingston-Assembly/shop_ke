@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center py-5">
+  <h3>Thank you!</h3>
+  <p>Your order #{{ order.id }} has been placed.</p>
+  {% if not order.paid and order.payment_method == 'MPESA' %}
+  <p class="text-muted">We will confirm your M-Pesa payment (code: {{ order.mpesa_code|default:'N/A' }}) shortly.</p>
+  {% endif %}
+  <a href="/" class="btn btn-primary mt-3">Back to Home</a>
+</div>
+{% endblock %}
